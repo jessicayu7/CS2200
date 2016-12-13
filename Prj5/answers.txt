@@ -1,0 +1,57 @@
+CS 2200 Fall 2016
+Project 5
+Name:
+GT Number:
+
+Problem 1B
+----------
+
+1 CPU: Total execution time: 67.6 s
+2 CPU: Total execution time: 35.9 s
+3 CPU: Total execution time: 33.6 s
+4 CPU: Total execution time: 33.4 s
+
+From the execution time we can tell that there is no linear relationship between the total execution time and number of CPU used. It is because when more CPU is used, it is more possible that the idle state will take place and more time will be spent on waiting for thread to run.
+
+
+Problem 2B
+----------
+
+800ms:	# of Context Switches: 136
+	Total execution time: 67.6 s
+	Total time spent in READY state: 325.4 s
+
+600ms:	# of Context Switches: 161
+	Total execution time: 67.6 s
+	Total time spent in READY state: 314.5 s
+
+400ms:	# of Context Switches: 203
+	Total execution time: 67.6 s
+	Total time spent in READY state: 298.8 s
+
+200ms:	# of Context Switches: 362
+	Total execution time: 67.5 s
+	Total time spent in READY state: 285.2 s
+
+From the results given above, we can see that as the time slice decreases, the total time spent on the ready state also decreases. However, the shorter time slice does not indicate a better solution as there will be more number of context switches associated with. This will cause more time be spent on context switching as well as more CPU use.
+
+
+Problem 3B
+----------
+FIFO:   Total time spent in READY state: 389.9 s
+
+Round-Robin(500ms): Total time spent in READY state: 302.3 s
+
+Round-Robin(100ms): Total time spent in READY state: 284.7 s
+
+Static-Priority: Total time spent in READY state: 145.6 s
+
+From the results, we can tell that the static priority has the lowest total time spent in Ready State and closest to SJF. 
+
+
+
+
+
+
+
+
